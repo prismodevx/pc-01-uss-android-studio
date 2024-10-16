@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <TextView
+        android:id="@+id/txt_bienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido:"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bienvenido"/>
+
+    <RadioGroup
+        android:id="@+id/rdg_dificultad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/r_facil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fácil"/>
+
+        <RadioButton
+            android:id="@+id/r_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal"/>
+
+        <RadioButton
+            android:id="@+id/r_dificil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difícil"/>
+
+        <RadioButton
+            android:id="@+id/r_m_dificil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Muy Difícil"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_repartir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Repartir"
+        app:layout_constraintTop_toBottomOf="@+id/rdg_dificultad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
